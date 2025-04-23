@@ -8,8 +8,8 @@
 }
 .dashboard{
     display: grid;
-    grid-template-columns: 16rem auto 20rem;
-    /* overflow: hidden; */
+    /* grid-template-columns: 16rem auto 16rem; */
+    overflow: hidden;
     height: 100vh;
     background-color:#f2fff8;
 }
@@ -17,11 +17,14 @@ aside{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    /* position: fixed; */
-    /* top: 0;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    height: 100vh; */
+    z-index: 10;
+    height: 100vh;
+    width: 16rem;
+  
 }
 nav{
     display: flex;
@@ -58,9 +61,10 @@ main{
         padding: 15px;
         border-right: 1px solid black;
         border-left: 1px solid black;
-        /* overflow-y: scroll;
+        overflow-y: scroll;
         margin-left: 16rem;
-        margin-right: 16rem; */
+        margin-right: 16rem;
+        z-index: 1;
 
 }
 .main-header{
@@ -271,6 +275,9 @@ main{
     top: 0;
     right: 0;
     height: 100vh;
+    z-index: 10;
+    width: 16rem;
+    position: fixed;
 }
 
 .right-side-bar-top{
@@ -458,6 +465,7 @@ font-weight: 400;
 }
 .main-content-below-right-header{
      display: flex;
+    padding: 10px;
     align-items: center;
     justify-content: space-between;
 }
@@ -472,20 +480,48 @@ font-weight: 400;
 }
 .main-content-below-right-content{
     display: flex;
-    /* margin-bottom: 250px; */
-    /* align-items: center; */
-    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 10px;
+    /* justify-content: space-between; */
 }
+
 .main-content-below-right-content-logo img{
     width: 100%;
     height: 100%;
 }
+
 .main-content-below-right-content-logo{
     display: flex;
     justify-content: center;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap: 250px;
+    justify-content: space-between;
+    border-bottom: 1px solid green;
+}
+.content-below{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.content-below h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+.content-below span{
+    font-size: 14px;
+    font-weight: 300;
+    color: gray;
+}
+.content-right h3{
+    font-size: 13px;
+    font-weight: 900;
 }
 
 .right-side-bar-top-text span{
@@ -536,4 +572,7 @@ font-weight: 400;
     background-color: #2bca74;
     height: 100%;
     border-radius: 10px;
+}
+::-webkit-scrollbar{
+    display: none;
 }
